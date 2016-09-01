@@ -68,7 +68,7 @@ public class JpaConfig {
         Properties properties = new Properties();
         properties.setProperty("hibernate.dialect", environment.getProperty("hibernate.dialect"));
         properties.setProperty("hibernate.id.new_generator_mappings", environment.getProperty("hibernate.id.new_generator_mappings"));
-        properties.setProperty("hibernate.ejb.naming_strategy", environment.getProperty("hibernate.ejb.naming_strategy"));
+        properties.setProperty("hibernate.improved_naming_strategy", environment.getProperty("hibernate.improved_naming_strategy"));
         properties.setProperty("hbm2ddl.auto", environment.getProperty("hbm2ddl.auto"));
 
         properties.setProperty("hibernate.show_sql", "true");
