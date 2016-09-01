@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @SpringBootApplication is a collection of three annotations
+ *  - @SpringBootApplication is a collection of three annotations
  *  - @Configuration : marks the class as a potential bean definition class
  *  - @EnableAutoConfiguration : don't know yet
  *  - @ComponentScan : loads the @Component annotated classes into

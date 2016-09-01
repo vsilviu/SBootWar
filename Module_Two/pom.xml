@@ -22,6 +22,9 @@
 
     <properties>
         <lib.mysql.connector>5.1.12</lib.mysql.connector>
+        <lib.commons.beanutils>1.9.2</lib.commons.beanutils>
+        <lib.reflections>0.9.10</lib.reflections>
+        <lib.hibernate>5.0.9.Final</lib.hibernate>
     </properties>
 
     <dependencies>
@@ -40,6 +43,27 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${lib.mysql.connector}</version>
+        </dependency>
+
+        <!-- Bean utilitary -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${lib.commons.beanutils}</version>
+        </dependency>
+
+        <!-- Reflection -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>${lib.reflections}</version>
+        </dependency>
+
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${lib.hibernate}</version>
         </dependency>
     </dependencies>
 

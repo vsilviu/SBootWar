@@ -1,5 +1,9 @@
 package generic.module.one.controller;
 
+import generic.module.two.entity.Community;
+import generic.module.two.service.CommunityService;
+import generic.module.two.service.GenericService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,10 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
  *  - @ResponseBody - the contents of the response body
  */
 @RestController
-public class CommunityController {
+@RequestMapping("/community")
+public class CommunityController extends GenericController<Community> {
 
-    @RequestMapping("/hello")
-    public String hello() {
-        return "Hello world!";
+    @Autowired
+    private CommunityService communityService;
+
+    @Override
+    protected GenericService<Community> getService() {
+        return communityService;
     }
 }
