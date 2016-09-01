@@ -12,6 +12,16 @@
 
     <artifactId>module.one</artifactId>
 
+    <dependencies>
+        <!-- Injected in order to get the context configuration from
+             @Configuration annotated classes -->
+        <dependency>
+            <groupId>com.kappa</groupId>
+            <artifactId>module.two</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <finalName>${artifactId}-${version}</finalName>
 

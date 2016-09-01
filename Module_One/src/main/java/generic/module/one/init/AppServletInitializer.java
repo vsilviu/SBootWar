@@ -1,4 +1,4 @@
-package generic.init;
+package generic.module.one.init;
 
 /**
  * Created by Silviu on 8/31/16.
@@ -17,11 +17,11 @@ import org.springframework.context.annotation.Configuration;
  *  - @ComponentScan : loads the @Component annotated classes into
  *                     the spring annotated context as beans
  *                     if no value is defined, the scan is relative to
- *                     the package holding this class
+ *                     the package holding this class (scanning is for module one!)
  */
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan({"generic"})
+@ComponentScan({"generic.module.one"})
 public class AppServletInitializer extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
