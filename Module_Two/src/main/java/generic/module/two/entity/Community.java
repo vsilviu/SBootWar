@@ -14,7 +14,7 @@ import javax.persistence.*;
  * Created by mitziuro on 8/24/16.
  */
 @Entity
-@Table(name="COMMUNITY")
+//@Table(name="COMMUNITY")
 @Securizable
 public class Community extends Auditable implements Identificable, Ownable, SoftDelete {
 

@@ -11,12 +11,12 @@ import org.springframework.context.annotation.PropertySource;
  */
 
 /**
- * @Configuration  : This class is a possible bean definition class
- * @ComponentScan  : It also scans for any @Component annotated classes in the
+ * - @Configuration  : This class is a possible bean definition class
+ * - @ComponentScan  : It also scans for any @Component annotated classes in the
  *                   package defined above (set to be the root package of the module)
- * @Import         : It imports the other modules' config files here with @Import
+ * - @Import         : It imports the other modules' config files here with @Import
  *                   (a dependency to the other modules had to be defined in module one's pom)
- * @PropertySource : Defines the location of the application properties file
+ * - @PropertySource : Defines the location of the application properties file
  */
 @Configuration
 @Import(value = {ModuleTwoScanner.class})
