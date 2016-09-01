@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
@@ -19,8 +20,11 @@ import java.util.Properties;
 
 /**
  * These are the standard configuration for jpa
+ * - @EnableJpaRepositories : enables the use of @Repository
+ * - entityManagerFactory is the place of @Entity annotation scan!
  */
 @Configuration
+@EnableJpaRepositories({"generic.module.two.repository"})
 public class JpaConfig {
 
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(JpaConfig.class);
@@ -55,7 +59,7 @@ public class JpaConfig {
         entityManager.setDataSource(dataSource());
 
         //packages to scan
-        entityManager.setPackagesToScan("com.corpo.komm.core.model");
+        entityManager.setPackagesToScan("generic.module.two.entity");
 
         //set additional properties
         Properties properties = additionalProperties();

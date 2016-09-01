@@ -80,7 +80,7 @@ public class QueryExecutor<T> {
 
         }
 
-        return new PageImpl<T>(criteria.list(), pageable, totalRows);
+        return new PageImpl<>(criteria.list(), pageable, totalRows);
     }
 
 
